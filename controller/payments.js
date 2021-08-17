@@ -28,7 +28,36 @@ export const getUserPayments = (req,res) => {
     const paymentData = readData('./payments.json');
     const {id} = req.params;
 
-    let foundPayments = paymentData.findall((payment) => payment.UserID === id );
+    let foundPayments = paymentData.filter((payment) => payment.UserID === id );
 
     res.send(foundPayments);
+}
+
+export const getPayment = (req,res) =>{
+
+    const {paymentID} = req.params;
+    const paymentData = readData('./payments.json');
+    let foundPayment = paymentData.filter((payment) => payment.PaymentID === paymentID );
+
+    res.send(foundPayment);
+
+}
+
+export const updatePayments = (req,res) =>{
+
+    const {paymentID} = req.params;
+    const {Status, Paid_date, Due_Date} = req.body;  // ! Due Date ? Extension for loan ?
+    const paymentData = readData('./payments.json');
+    let foundPayment = paymentData.find((payment) => payment.PaymentID === paymentID ); // ! Find returns object, Filter returns list. 
+    if(Status){
+        foundPayment.Status = Status;
+    }if(Paid_date){
+        foundPayment.Paid_date = Paid_date;
+    }if(Due_Date){
+        foundPayment.Due_Date = Due_Date;
+    }
+
+    console.log(foundPayment);
+    overWriteData('./payments.json', JSON.stringify(paymentData));
+    res.send(foundPayment);
 }
