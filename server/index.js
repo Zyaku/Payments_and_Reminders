@@ -1,11 +1,12 @@
 import express from 'express';
 import BodyParser from 'body-parser';
-import userRoutes from './routes/users.js';
+import userRoutes from './api/routes/users.js';
 
 const app = express();
 const PORT = 5000;
 
 app.use(BodyParser.json());
+
 
 // Route
 app.get('/', (req,res) => {

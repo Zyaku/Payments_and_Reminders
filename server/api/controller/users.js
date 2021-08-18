@@ -1,19 +1,21 @@
 import {stringify, v4 as uuidv4} from 'uuid';
 import { readData, overWriteData } from './data.js';
 
+const userDataPath = './users.json';
+
 
 export const getUsers = (req,res) => {
-        const data = readData('./users.json');
+        const data = readData(userDataPath);
         res.send(data);
 }
 
 export const createNewUser = (req,res) => {
     const userInfo = req.body;
     const newUser = {...userInfo, UserID : uuidv4(), Payments:[] };
-    const userData = readData('./users.json');
+    const userData = readData(userDataPath);
 
     userData.push(newUser);
-    overWriteData('./users.json',JSON.stringify(userData));
+    overWriteData(userDataPath,JSON.stringify(userData));
 
     res.send(`User with the Name: ${userInfo.firstName} has been created`);
 }
@@ -21,7 +23,7 @@ export const createNewUser = (req,res) => {
 export const getUser = (req,res) => {
 
     const {id} = req.params;
-    const userData = readData('./users.json');
+    const userData = readData(userDataPath);
     const foundUser = userData.find((user) => user.UserID === id);
 
     res.send(foundUser);
@@ -32,7 +34,7 @@ export const updateUser = (req,res)=> {
     const {id} = req.params;
     const {FirstName, LastName, Email} = req.body;
 
-    const userData = readData('./users.json');
+    const userData = readData(userDataPath);
     const foundUser = userData.find((user) => user.UserID === id );
 
     if(FirstName){
@@ -44,7 +46,7 @@ export const updateUser = (req,res)=> {
         foundUser.Email = Email;
     }
 
-    overWriteData('./users.json', JSON.stringify(userData));
+    overWriteData(userDataPath, JSON.stringify(userData));
     res.send(`User ${id} has been updated.`);
 
 }
