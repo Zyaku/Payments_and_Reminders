@@ -1,0 +1,46 @@
+/* Color Theme Swatches in Hex */
+
+
+.navBar-items{
+    /* background: linear-gradient(-90deg, rgb(60, 138, 184) 75%, rgb(226, 95, 19) 100%); */
+    background: var(--navBlue);
+    height: 3em;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+
+
+.navBar-logo{
+    color:#fff;
+    /* justify-content: left; */
+    cursor:pointer;
+    margin: 1em;
+    padding: 1em;
+    
+}
+
+.navBar-Choices{
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 2em;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right:2em;
+}
+
+.nav-links{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    cursor:pointer;
+}
+
+.nav-links:hover{
+     text-decoration: underline;  /* for now  */
+    
+}

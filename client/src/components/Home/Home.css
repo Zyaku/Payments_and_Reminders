@@ -1,0 +1,20 @@
+.Description{
+
+    justify-content: left;
+}
+
+.placeholder{
+    background: rgb(146, 135, 135);
+    height : 50vw;
+    width: 50vw;
+}
+
+.Home{
+    display: flex;
+}
+
+.Description{
+    justify-content: center;
+    text-align: justify;
+    margin: 2em;
+}

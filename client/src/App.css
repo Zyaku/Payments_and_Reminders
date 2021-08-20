@@ -1,0 +1,12 @@
+:root{
+    --navBlue :#005980; 
+    --brightBlue :#4DC9FF; 
+    --hoverBlue :#00B2FF; 
+    --contrastBlue :#266580; 
+    --baseBlue :#008FCC; 
+    --baseGrey : rgb(61, 61, 65);
+}
+
+:root{
+    background: var(--baseGrey);
+}
