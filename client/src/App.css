@@ -5,8 +5,9 @@
     --contrastBlue :#266580; 
     --baseBlue :#008FCC; 
     --baseGrey : rgb(61, 61, 65);
+    --testBlue : rgb(55, 71, 82);
 }
 
 :root{
-    background: var(--baseGrey);
+    background: #fff;
 }

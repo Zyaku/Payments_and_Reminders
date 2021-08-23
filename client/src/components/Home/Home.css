@@ -4,9 +4,15 @@
 }
 
 .placeholder{
-    background: rgb(146, 135, 135);
     height : 50vw;
     width: 50vw;
+}
+
+.clock{
+    display: flex;
+    background-color: blue;
+    max-height: 400px;
+    max-width: 400px;
 }
 
 .Home{
@@ -16,5 +22,12 @@
 .Description{
     justify-content: center;
     text-align: justify;
-    margin: 2em;
+    margin: 0;
+    background-color: var(--testBlue);
+    height: inherit;
+}
+
+.Desc-Header, .Desc-Body {
+    margin : 2em 2em 0em 2em;
+    color : white;
 }
