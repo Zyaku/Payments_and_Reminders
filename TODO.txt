@@ -1,0 +1,21 @@
+- Finish first draft Front-end:
+    - Finish Basic CSS
+    - Implement Action listeners
+    - Redux / State mangment (Logged In / Logged Out)
+        - When Logged in:
+            - Sign Up not an option 
+            - Log in -> log out 
+            - Profile Section with possible Username / Password / Email Change
+            - Payments Section according to user
+        When Logged out:
+            - One more Page ? (Ideas : Random embedded video for practice)
+    Bugs:
+        - Why does SignUp have LogIn css when not specified / empty ?
+
+- remake / server CRUD API to match frontend:
+    - should include user data ( unique e-mail/ unique Username / password )
+        - Hashing ? 
+        - Sorting ?
+    - connect server to client
+
+- AWS/Mongo DB implementation ?

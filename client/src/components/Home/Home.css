@@ -6,14 +6,15 @@
 .placeholder{
     height : 50vw;
     width: 50vw;
+    
 }
 
-.clock{
+/* .clock{
     display: flex;
     background-color: blue;
     max-height: 400px;
     max-width: 400px;
-}
+} */
 
 .Home{
     display: flex;

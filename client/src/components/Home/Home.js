@@ -8,7 +8,7 @@ class Home extends Component{
                 <div>   
                     <i className="Home-visuals"></i>
                     <div className="placeholder"> 
-                        <div className="clock"><CoinClock/></div>
+                        {/* <div className="clock"><CoinClock/></div> */}
                     </div> 
                 </div>
                 <div className="Description" >
